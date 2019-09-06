@@ -3,7 +3,7 @@ import Typing from 'react-typing-animation';
 import './App.css';
 
 function App() {
-  const Email = "musambaloyi@gamil.com";
+  const Email = "musambaloyi@gmail.com";
   return (
     <div className="App">
       <header className="App-header">

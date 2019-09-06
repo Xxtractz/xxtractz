@@ -1,23 +1,34 @@
 import React from 'react';
-import logo from './logo.svg';
+import Typing from 'react-typing-animation';
 import './App.css';
 
 function App() {
+  const Email = "musambaloyi@gamil.com";
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          <Typing speed={90} >
+            <span>
+              Hi,
+              <br></br>
+              <strong>
+                  Musa Here !
+              </strong>
+              <i>
+                <br></br> Welcome to my site
+                <br></br> Unfortunately it's  currently under Construction!
+                <br></br>
+                <strong>
+                  THANKS
+                </strong>
+              </i>
+            </span>
+          </Typing>
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+          <p>
+            Contact me at - <a href={"mailto:" + Email}>{Email}</a>
+          </p>
       </header>
     </div>
   );

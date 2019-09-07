@@ -8,7 +8,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <p>
-          <Typing speed={90} >
+          <Typing >
             <span>
               Hi,
               <br></br>

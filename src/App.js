@@ -1,37 +1,27 @@
-import React from 'react';
-import Typing from 'react-typing-animation';
-import './App.css';
+import React, {Component} from "react";
+import { BrowserRouter as Router,
+    Route,
+    Switch,
+    Redirect,
+} from "react-router-dom";
+import './App.scss';
+import Home from "./components/home";
+import Notfound from "./components/notfound/notfound";
 
-function App() {
-  const Email = "musambaloyi@gmail.com";
-  return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          <Typing >
-            <span>
-              Hi,
-              <br></br>
-              <strong>
-                  Musa Here !
-              </strong>
-              <i>
-                <br></br> Welcome to my site
-                <br></br> Unfortunately it's  currently under Construction!
-                <br></br>
-                <strong>
-                  THANKS
-                </strong>
-              </i>
-            </span>
-          </Typing>
-        </p>
-          <p>
-            Contact me at - <a href={"mailto:" + Email}>{Email}</a>
-          </p>
-      </header>
-    </div>
-  );
+class App extends Component {
+    render() {
+        return (
+            <div>
+                <Router>
+                    <Switch>
+                        <Route exact path="/" component={Home} />
+                        <Route exact path="/404" component={Notfound}/>
+                        <Redirect to="/404" />
+                    </Switch>
+                </Router>
+            </div>
+        );
+    }
 }
 
 export default App;

@@ -8,11 +8,13 @@
     "apollo-link-http": "^1.5.16",
     "graphql": "^14.5.4",
     "graphql-tag": "^2.10.1",
+    "node-sass": "^4.14.1",
     "react": "^16.9.0",
     "react-animated-text": "^0.1.4",
     "react-apollo": "^3.1.0",
     "react-dom": "^16.9.0",
-    "react-scripts": "3.1.1",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "^3.4.3",
     "react-typing-animation": "^1.6.2"
   },
   "scripts": {

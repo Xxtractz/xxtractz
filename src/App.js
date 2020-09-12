@@ -4,7 +4,7 @@ import { BrowserRouter as Router,
     Switch,
     Redirect,
 } from "react-router-dom";
-import './App.scss';
+import './App.css';
 import Home from "./components/home";
 import Notfound from "./components/notfound/notfound";
 

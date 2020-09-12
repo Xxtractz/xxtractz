@@ -1,3 +1,12 @@
+
+/*_secondary: #BA55D3;*/
+
+html {
+  background: #222222 !important;
+  min-height: 100%;
+  color: aliceblue;
+}
+
 h1 {
   font-family: "Lucida Console", fantasy;
   font-size: 25px;
@@ -41,4 +50,12 @@ pre {
   font-variant: normal;
   font-weight: 400;
   line-height: 18.5714px;
+}
+
+section {
+  height: 100vh;
+}
+
+.landing {
+
 }

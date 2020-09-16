@@ -1,55 +1,55 @@
-.landing {
-  width : 100%;
-  /*//background-color: #e2e2e2*/
-}
+/*.landing {*/
+/*  width : 100%;*/
+/*  background-color: #e2e2e2*/
+/*}*/
 
-.wrapper {
-  padding-top: 100px;
-  margin: 60px auto;
-  width: 900px;
-  height: 680px;
-  position: relative;
-  overflow: hidden;
-}
+/*.wrapper {*/
+/*  padding-top: 100px;*/
+/*  margin: 60px auto;*/
+/*  width: 900px;*/
+/*  height: 680px;*/
+/*  position: relative;*/
+/*  overflow: hidden;*/
+/*}*/
 
-.main-element {
-  position: absolute;
-  top: 1%;
-  left: 1%;
-  display: block;
-  height: 98%;
-  width: 98%;
-  margin: auto;
-  align-self: center;
-  background: #222222;
-  z-index: 1;
-}
+/*.main-element {*/
+/*  position: absolute;*/
+/*  top: 1%;*/
+/*  left: 1%;*/
+/*  display: block;*/
+/*  height: 98%;*/
+/*  width: 98%;*/
+/*  margin: auto;*/
+/*  align-self: center;*/
+/*  background: #222222;*/
+/*  z-index: 1;*/
+/*}*/
 
-.main-element .content{
-  padding: 25px;
-}
+/*.main-element .content{*/
+/*  padding: 25px;*/
+/*}*/
 
-.border {
-  position: absolute;
-  display: block;
-  top: -50%;
-  left: -50%;
-  z-index: -9;
-  display: block;
-  height: 200%;
-  width: 200%;
-  transform: rotate(-45deg);
-  overflow: hidden;
-  background: linear-gradient(to right, #222222 20%, #222222 40%, #BA55D3 50%, #BA55D3 55%, #222222 70%, #222222 100%);
-  background-size: 200% auto;
+/*.border {*/
+/*  position: absolute;*/
+/*  display: block;*/
+/*  top: -50%;*/
+/*  left: -50%;*/
+/*  z-index: -9;*/
+/*  display: block;*/
+/*  height: 200%;*/
+/*  width: 200%;*/
+/*  transform: rotate(-45deg);*/
+/*  overflow: hidden;*/
+/*  background: linear-gradient(to right, #222222 20%, #222222 40%, #BA55D3 50%, #BA55D3 55%, #222222 70%, #222222 100%);*/
+/*  background-size: 200% auto;*/
 
-  animation: shine 4s linear infinite;
-}
+/*  animation: shine 4s linear infinite;*/
+/*}*/
 
-/*Begin shimmer code*/
+/*!*Begin shimmer code*!*/
 
-@keyframes shine {
-  to {
-    background-position: 200% center;
-  }
-}
+/*@keyframes shine {*/
+/*  to {*/
+/*    background-position: 200% center;*/
+/*  }*/
+/*}*/

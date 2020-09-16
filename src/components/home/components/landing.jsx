@@ -6,13 +6,11 @@ class Landing extends Component {
     constructor(props) {
         super(props);
 
-        this.state={
-
-        }
+        this.state = {}
     }
 
-    message(str){
-        return(
+    message(str) {
+        return (
             <div>
                 {str}
                 <br/>
@@ -24,25 +22,22 @@ class Landing extends Component {
     render() {
         return (
             <div>
-                <section id={"#"} className={"landing"}>
-                    <div className="wrapper">
-                        <div className="border"></div>
-                        <div className="main-element">
-                            <div className="content">
-                                <Typing>
-                                    <h1>Hello <span role="img" aria-label="Happy face">🤗</span> </h1>
-
-                                </Typing>
-
-                                <br/>
-                                <Typing>
-                                    {this.message("Sorry! No Content available")}
-                                </Typing>
-
-                            </div>
-                        </div>
+                <section id="hero" className="d-flex flex-column justify-content-center align-items-center">
+                    <div className="hero-container text-center" data-aos="fade-in">
+                        <h1>Musa Baloyi | Xxtractz</h1>
+                        <p>
+                            <Typing>
+                                {this.message("Developer, Drummer, Entrepreneur...")}
+                            </Typing>
+                        </p>
+                    </div>
+                    <div className={"credits"}>
+                        Photo by <a
+                            href={"https://unsplash.com/@emilep?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText"}>Emile Perron</a> on <a
+                            href={"https://unsplash.com/s/photos/code?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText"}>Unsplash</a>
                     </div>
                 </section>
+
             </div>
         );
     }

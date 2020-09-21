@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import Landing from "./components/landing";
-// import About from "./components/about";
+import About from "./components/about";
 // import Social from "./components/social";
 // import Contact from "./components/contact";
 
@@ -9,7 +9,7 @@ class Home extends Component {
         return (
             <div>
                 <Landing/>
-                {/*<About/>*/}
+                <About/>
                 {/*<Social/>*/}
                 {/*<Contact/>*/}
             </div>

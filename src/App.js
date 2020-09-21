@@ -6,14 +6,22 @@ import {
     Redirect,
 } from 'react-router-dom';
 
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.css';
-
 import Home from './components/home';
 import Notfound from './components/notfound/notfound';
 import Layout from './components/layout/layout';
+
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import '@icon/icofont/icofont.css';
+import '@icon/icofont/icofont.svg';
+import './App.css';
+
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fab } from '@fortawesome/free-brands-svg-icons';
+import { fas } from '@fortawesome/free-solid-svg-icons';
+
+library.add(fab,fas);
 
 class App extends Component {
     componentDidMount() {

@@ -30,10 +30,10 @@ class About extends Component {
     }
 
     get About() {
-        return ("Who am I? I usually let people describe who I am.\n\n" +
-            " explore and learn new things. I measure my success by my failures, I believe that\n" +
-            " prosperity is more than just a reward, but it is what drives a self‐motivated person\n" +
-            " like me. I have a true passion, talent, and determination in everything I do or work on.\n");
+        return ("I see myself as a self motivated entrepreneur, a smiley face, hard-working, crazy, abnormal, risk taker and " +
+            "considerate person. I believe in learning, because that is the root of Experience " +
+            "“There is nothing that is more helpful in life than listening to those who are experienced”, " +
+            "I measure my success by failure. I’m not a fan of theory.\n");
     }
 
     list(icon, title, description, linkUrl, linkLabel) {
@@ -54,6 +54,9 @@ class About extends Component {
 
                         <div className="section-title">
                             <h2>About</h2>
+                            <blockquote className={"text-dark-50"}>
+                                Who am I? I usually let people describe who I am.
+                            </blockquote>
                             <p>{this.About}
                             </p>
                         </div>
@@ -63,7 +66,7 @@ class About extends Component {
                                 <img src={profileImage} className="img-fluid" alt=""/>
                             </div>
                             <div className="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-right">
-                                <h3>Details.</h3>
+                                <h3>Details_</h3>
                                 <p className="font-italic">
                                     <blockquote className={"text-dark-50"}>“My personal information”
                                     </blockquote>
@@ -87,11 +90,13 @@ class About extends Component {
                                     </div>
                                 </div>
                                 <p>
-                                    I have a desire to be the best at all times.
-                                    I don't give up my dreams, because of my financial woes or obstacles,
-                                    this, however, makes me to be more determined to succeed.
-
                                     <br/>
+                                    <br/>
+                                    <h3>Interest_</h3>
+                                    <p className="font-italic">
+                                        <blockquote className={"text-dark-50"}>“we all have life outside of Work”
+                                        </blockquote>
+                                    </p>
 
                                 </p>
                             </div>

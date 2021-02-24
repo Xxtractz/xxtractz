@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import profileImage from '../../assets/img/Logo.png';
+import profileImage from '../../assets/img/image.jpeg';
 
 class Layout extends Component {
     render() {

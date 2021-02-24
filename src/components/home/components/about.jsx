@@ -4,51 +4,45 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 
 class About extends Component {
 
-    get Website() {
-        return (<a href={"https://www.xxtractz.co.za"}>xxtractz.co.za</a>)
-    }
-
-    get Phone() {
-        return (<a href={"tel:+27736913895"}>+27 73 691 3895</a>)
-    }
-
-    get Email() {
-        return (<a href={"mailto:musambaloyi@gmail.com"}>musambaloyi@gmail.com</a>)
-    }
-
-    get Nationality() {
-        return 'South African';
-    }
-
-    get City() {
-        return 'Johannesburg, South Africa';
-    }
-
-    get Birthday() {
-        return "02 Jan";
-    }
-
-    get Gender() {
-        return "Male";
-    }
-
-    get Age() {
-        const today = new Date();
-        const birthDate = new Date('1998-01-02');
-        let age = today.getFullYear() - birthDate.getFullYear();
-        const m = today.getMonth() - birthDate.getMonth();
-        if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
-            age--;
+    constructor(props) {
+        super(props);
+        this.state = {
+            personal: {
+                name: "Musa Martin Baloyi",
+                email: {
+                    label: "musambaloyi@gmail.com",
+                    url: "mailto:musambaloyi@gmail.com"
+                },
+                website: {
+                    label: "xxtractz.co.za",
+                    url: "https://www.xxtractz.co.za"
+                },
+                tel: {
+                    label: "+27 73 691 3895",
+                    url: "tel:+27736913895"
+                },
+                dateOfBirth: "1998 Jan 02",
+                nationality: "South African",
+                location: "Johannesburg South, Gauteng, South Africa",
+            }
         }
-        return age.toString();
+
     }
 
-    list(icon, title, description) {
+    get About() {
+        return ("Who am I? I usually let people describe who I am.\n\n" +
+            " explore and learn new things. I measure my success by my failures, I believe that\n" +
+            " prosperity is more than just a reward, but it is what drives a self‐motivated person\n" +
+            " like me. I have a true passion, talent, and determination in everything I do or work on.\n");
+    }
+
+    list(icon, title, description, linkUrl, linkLabel) {
         return (<li>
             <i className={'pr-2'}>
                 <FontAwesomeIcon icon={['fas', icon]}/>
             </i>
             <strong>{title}:</strong> {description}
+            <a href={linkUrl}>{linkLabel}</a>
         </li>);
     }
 
@@ -60,11 +54,7 @@ class About extends Component {
 
                         <div className="section-title">
                             <h2>About</h2>
-                            <p>Who am I, I am young, Goal-driven, intelligent and an enthusiastic person willing to
-                                explore and learn new things. I measure my success by my failures, I believe that
-                                prosperity is more than just a reward, but it is what drives a self‐motivated person
-                                like me. I have a true passion, talent, and determination in everything I do or work on.
-
+                            <p>{this.About}
                             </p>
                         </div>
 
@@ -73,27 +63,26 @@ class About extends Component {
                                 <img src={profileImage} className="img-fluid" alt=""/>
                             </div>
                             <div className="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-right">
-                                <h3>Developer.</h3>
+                                <h3>Details.</h3>
                                 <p className="font-italic">
-                                    <blockquote className={"text-dark-50"}>“It's difficult until you start working on
-                                        it.”
+                                    <blockquote className={"text-dark-50"}>“My personal information”
                                     </blockquote>
                                 </p>
                                 <div className="row">
                                     <div className="col-lg-6">
                                         <ul>
-                                            {this.list('chevron-circle-right', 'Birthday', this.Birthday)}
-                                            {this.list('chevron-circle-right', 'Website', this.Website)}
-                                            {this.list('chevron-circle-right', 'Phone', this.Phone)}
-                                            {this.list('chevron-circle-right', 'City', this.City)}
+                                            {this.list('chevron-circle-right', 'Full Name', this.state.personal.name)}
+                                            {this.list('chevron-circle-right', 'Website', "", this.state.personal.website.url, this.state.personal.website.label)}
+                                            {this.list('chevron-circle-right', 'Tel', "", this.state.personal.tel.url, this.state.personal.tel.label)}
+                                            {this.list('chevron-circle-right', 'Location', this.state.personal.location)}
                                         </ul>
                                     </div>
                                     <div className="col-lg-6">
                                         <ul>
-                                            {this.list('chevron-circle-right', 'Age', this.Age)}
-                                            {this.list('chevron-circle-right', 'Gender', this.Gender)}
-                                            {this.list('chevron-circle-right', 'Email', this.Email)}
-                                            {this.list('chevron-circle-right', 'Nationality', this.Nationality)}
+                                            {this.list('chevron-circle-right', 'Date of Birth', this.state.personal.dateOfBirth)}
+                                            {this.list('chevron-circle-right', 'Gender', "Male")}
+                                            {this.list('chevron-circle-right', 'Email', "", this.state.personal.email.url, this.state.personal.email.label)}
+                                            {this.list('chevron-circle-right', 'Nationality', this.state.personal.nationality)}
                                         </ul>
                                     </div>
                                 </div>

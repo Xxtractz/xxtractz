@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import profileImage from '../../assets/img/Logo.png';
+import profileImage from '../../assets/img/image.jpeg';
 
 class Layout extends Component {
     render() {
@@ -23,7 +23,7 @@ class Layout extends Component {
                                 <li className="active"><a href="/"><i className="bx bx-home"/> <span>Home</span></a>
                                 </li>
                                 <li><a href={"#about"}><i className="bx bx-user"/> <span>About</span></a></li>
-                                {/*<li><a href={"#resume"}><i className="bx bx-file-blank"/> <span>Resume</span></a></li>*/}
+                                <li><a href={"#skills"}><i className="bx bx-file-blank"/> <span>Skills</span></a></li>
                                 {/*<li><a href={"#portfolio"}><i className="bx bx-book-content"/> Portfolio</a></li>*/}
                                 {/*<li><a href={"#services"}><i className="bx bx-server"/> Services</a></li>*/}
                                 {/*<li><a href={"#contact"}><i className="bx bx-envelope"/> Contact</a></li>*/}

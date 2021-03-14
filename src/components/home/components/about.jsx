@@ -47,6 +47,7 @@ class About extends Component {
     }
 
     render() {
+        const personalDetails = this.state.personal;
         return (
             <div>
                 <section id="about" className="about">
@@ -74,18 +75,18 @@ class About extends Component {
                                 <div className="row">
                                     <div className="col-lg-6">
                                         <ul>
-                                            {this.list('chevron-circle-right', 'Full Name', this.state.personal.name)}
-                                            {this.list('chevron-circle-right', 'Website', "", this.state.personal.website.url, this.state.personal.website.label)}
-                                            {this.list('chevron-circle-right', 'Tel', "", this.state.personal.tel.url, this.state.personal.tel.label)}
-                                            {this.list('chevron-circle-right', 'Location', this.state.personal.location)}
+                                            {this.list('chevron-circle-right', 'Full Name', personalDetails.name)}
+                                            {this.list('chevron-circle-right', 'Website', "", personalDetails.website.url, personalDetails.website.label)}
+                                            {this.list('chevron-circle-right', 'Tel', "", personalDetails.tel.url, personalDetails.tel.label)}
+                                            {this.list('chevron-circle-right', 'Location', personalDetails.location)}
                                         </ul>
                                     </div>
                                     <div className="col-lg-6">
                                         <ul>
-                                            {this.list('chevron-circle-right', 'Date of Birth', this.state.personal.dateOfBirth)}
+                                            {this.list('chevron-circle-right', 'Date of Birth', personalDetails.dateOfBirth)}
                                             {this.list('chevron-circle-right', 'Gender', "Male")}
-                                            {this.list('chevron-circle-right', 'Email', "", this.state.personal.email.url, this.state.personal.email.label)}
-                                            {this.list('chevron-circle-right', 'Nationality', this.state.personal.nationality)}
+                                            {this.list('chevron-circle-right', 'Email', "", personalDetails.email.url, personalDetails.email.label)}
+                                            {this.list('chevron-circle-right', 'Nationality', personalDetails.nationality)}
                                         </ul>
                                     </div>
                                 </div>
@@ -94,9 +95,12 @@ class About extends Component {
                                     <br/>
                                     <h3>Interest_</h3>
                                     <p className="font-italic">
-                                        <blockquote className={"text-dark-50"}>“we all have life outside of Work”
+                                        <blockquote className={"text-dark-50"}>“we all have life outside of work”
                                         </blockquote>
                                     </p>
+                                    I am a <strong>Drummer_</strong> - I am such a huge fan of music, I am that guy who
+                                    can just out of the blue start dancing to a good old blues song. I listen to almost
+                                    all Genres types.
 
                                 </p>
                             </div>

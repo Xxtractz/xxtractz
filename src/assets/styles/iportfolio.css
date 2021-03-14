@@ -321,6 +321,26 @@ section {
     left: 0;
 }
 
+.section-sub-title h4 {
+    font-size: 24px;
+    font-weight: lighter;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    position: relative;
+    color: #173b6c;
+}
+
+.section-sub-title h4::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: #194e8f;
+    bottom: 0;
+    left: 0;
+}
+
 .section-title p {
     margin-bottom: 0;
 }

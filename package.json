@@ -1,6 +1,6 @@
 {
   "name": "xxtractz",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.30",
@@ -23,6 +23,7 @@
     "react-dom": "^16.9.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "^4.0.3",
+    "react-skillbars": "^1.6.1",
     "react-typing-animation": "^1.6.2"
   },
   "scripts": {

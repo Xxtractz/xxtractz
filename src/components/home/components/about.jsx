@@ -1,108 +1,55 @@
 import React, {Component} from 'react';
 import profileImage from '../../../assets/img/image.jpeg';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {aboutSectionOne, aboutSectionTwo, aboutSectionThree, social} from "../../../constants/aboutConstants";
+import {AddBrandIcon, AddIcon} from "../../iconsUtil";
 
 class About extends Component {
-
-    constructor(props) {
-        super(props);
-        this.state = {
-            personal: {
-                name: "Musa Martin Baloyi",
-                email: {
-                    label: "musambaloyi@gmail.com",
-                    url: "mailto:musambaloyi@gmail.com"
-                },
-                website: {
-                    label: "xxtractz.co.za",
-                    url: "https://www.xxtractz.co.za"
-                },
-                tel: {
-                    label: "+27 73 691 3895",
-                    url: "tel:+27736913895"
-                },
-                dateOfBirth: "1998 Jan 02",
-                nationality: "South African",
-                location: "Johannesburg South, Gauteng, South Africa",
-            }
-        }
-
-    }
-
-    get About() {
-        return ("I see myself as a self motivated entrepreneur, a smiley face, hard-working, crazy, abnormal, risk taker and " +
-            "considerate person. I believe in learning, because that is the root of Experience " +
-            "“There is nothing that is more helpful in life than listening to those who are experienced”, " +
-            "I measure my success by failure. I’m not a fan of theory.\n");
-    }
-
-    list(icon, title, description, linkUrl, linkLabel) {
-        return (<li>
-            <i className={'pr-2'}>
-                <FontAwesomeIcon icon={['fas', icon]}/>
-            </i>
-            <strong>{title}:</strong> {description}
-            <a href={linkUrl}>{linkLabel}</a>
-        </li>);
-    }
-
     render() {
-        const personalDetails = this.state.personal;
         return (
             <div>
-                <section id="about" className="about">
+                <section id="about" className="about bg-light">
                     <div className="container">
 
                         <div className="section-title">
-                            <h2>About</h2>
-                            <blockquote className={"text-dark-50"}>
-                                Who am I? I usually let people describe who I am.
-                            </blockquote>
-                            <p>{this.About}
-                            </p>
+                            <h2 className="">Biography</h2>
+
                         </div>
 
                         <div className="row">
-                            <div className="col-lg-4" data-aos="fade-right">
-                                <img src={profileImage} className="img-fluid" alt=""/>
+                            <div className="col-md-7 mt-5">
+                                <blockquote className={"text-dark-50 mt-4"}>
+                                    Who am I? I usually let people describe who I am.
+                                </blockquote>
+                                <p className="pb-3">{aboutSectionOne}</p>
+                                <p className="pb-2">{aboutSectionTwo}</p>
+                                <p className="">{aboutSectionThree}</p>
                             </div>
-                            <div className="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-right">
-                                <h3>Details_</h3>
-                                <p className="font-italic">
-                                    <blockquote className={"text-dark-50"}>“My personal information”
-                                    </blockquote>
-                                </p>
-                                <div className="row">
-                                    <div className="col-lg-6">
-                                        <ul>
-                                            {this.list('chevron-circle-right', 'Full Name', personalDetails.name)}
-                                            {this.list('chevron-circle-right', 'Website', "", personalDetails.website.url, personalDetails.website.label)}
-                                            {this.list('chevron-circle-right', 'Tel', "", personalDetails.tel.url, personalDetails.tel.label)}
-                                            {this.list('chevron-circle-right', 'Location', personalDetails.location)}
-                                        </ul>
-                                    </div>
-                                    <div className="col-lg-6">
-                                        <ul>
-                                            {this.list('chevron-circle-right', 'Date of Birth', personalDetails.dateOfBirth)}
-                                            {this.list('chevron-circle-right', 'Gender', "Male")}
-                                            {this.list('chevron-circle-right', 'Email', "", personalDetails.email.url, personalDetails.email.label)}
-                                            {this.list('chevron-circle-right', 'Nationality', personalDetails.nationality)}
-                                        </ul>
+                            <div className="col-md-5 mr-auto" data-aos="fade-left">
+                                <div className="circular--portrait mx-auto  ">
+                                    <img src={profileImage} alt=""/>
+                                </div>
+                                <div className="text-center content">
+                                    <h3 className={"pt-2"}>Musa Baloyi</h3>
+                                    <h3 className="font-italic">
+                                        <code className={"text-dark-50"}>Xxtractz
+                                        </code>
+                                    </h3>
+                                    <p className="text-white-50 p-1"><a href={"https://www.wethinkcode.co.za"}>WethinkCode_
+                                        Alumni</a></p>
+
+                                    <div className="row">
+                                        <div className="mx-auto">
+                                            <ul>
+                                                {
+                                                    social.map((socialItem, key) =>
+                                                        <AddBrandIcon key={key} icon={socialItem.name} url={socialItem.url}/>
+                                                    )
+                                                }
+                                                <AddIcon icon={"envelope"} url={"mailto:musambaloyi@gmail.com"}/>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
-                                <p>
-                                    <br/>
-                                    <br/>
-                                    <h3>Interest_</h3>
-                                    <p className="font-italic">
-                                        <blockquote className={"text-dark-50"}>“we all have life outside of work”
-                                        </blockquote>
-                                    </p>
-                                    I am a <strong>Drummer_</strong> - I am such a huge fan of music, I am that guy who
-                                    can just out of the blue start dancing to a good old blues song. I listen to almost
-                                    all Genres types.
-
-                                </p>
                             </div>
                         </div>
 

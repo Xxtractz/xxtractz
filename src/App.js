@@ -8,7 +8,6 @@ import {
 
 import Home from './components/home';
 import Notfound from './components/notfound/notfound';
-import Layout from './components/layout/layout';
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -17,11 +16,11 @@ import '@icon/icofont/icofont.css';
 import '@icon/icofont/icofont.svg';
 import './App.css';
 
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { fab } from '@fortawesome/free-brands-svg-icons';
-import { fas } from '@fortawesome/free-solid-svg-icons';
+import {library} from '@fortawesome/fontawesome-svg-core';
+import {fab} from '@fortawesome/free-brands-svg-icons';
+import {fas} from '@fortawesome/free-solid-svg-icons';
 
-library.add(fab,fas);
+library.add(fab, fas);
 
 class App extends Component {
     componentDidMount() {
@@ -33,15 +32,13 @@ class App extends Component {
     render() {
         return (
             <div>
-                <Layout>
-                    <Router>
-                        <Switch>
-                            <Route exact path="/" component={Home}/>
-                            <Route exact path="/404" component={Notfound}/>
-                            <Redirect to="/404"/>
-                        </Switch>
-                    </Router>
-                </Layout>
+                <Router>
+                    <Switch>
+                        <Route exact path="/" component={Home}/>
+                        <Route exact path="/404" component={Notfound}/>
+                        <Redirect to="/404"/>
+                    </Switch>
+                </Router>
             </div>
         );
     }

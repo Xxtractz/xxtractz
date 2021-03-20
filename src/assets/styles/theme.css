@@ -59,3 +59,25 @@
 /*.landing {*/
 
 /*}*/
+
+.circular--portrait {
+    position: relative;
+    width: 420px;
+    height: 420px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.circular--portrait img {
+    width: 100%;
+    height: auto;
+    margin-top: -52px;
+}
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    .circular--portrait{
+        width: 250px;
+        height: 250px;
+    }
+}

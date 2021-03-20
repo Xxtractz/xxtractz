@@ -2,16 +2,19 @@ import React, {Component} from 'react';
 import Landing from "./components/landing";
 import About from "./components/about";
 import Skills from "./components/skills";
-// import Contact from "./components/contact";
+import Experience from "./components/experience";
+import Layout from "../layout/layout";
 
 class Home extends Component {
     render() {
         return (
             <div>
-                <Landing/>
-                <About/>
-                <Skills/>
-                {/*<Contact/>*/}
+                <Layout>
+                    <Landing/>
+                    <About/>
+                    <Experience/>
+                    <Skills/>
+                </Layout>
             </div>
         );
     }

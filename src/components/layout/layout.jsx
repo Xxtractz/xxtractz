@@ -27,15 +27,11 @@ class Layout extends Component {
                                 <li><a href={"#skills"}><i className="bx bx-file-blank"/> <span>Skills</span></a></li>
                             </ul>
                         </nav>
-                        {/*.nav-menu*/}
-                        <button type="button" className="mobile-nav-toggle d-xl-none"><i
-                            className="icofont-navigation-menu"/></button>
-
                     </div>
                 </header>
                 {/*End Header*/}
 
-                <div className="content">
+                <div id={"main"}>
                     <main>{this.props.children}</main>
                 </div>
             </div>

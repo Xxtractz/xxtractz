@@ -74,10 +74,18 @@
     margin-top: -52px;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1050px) {
     /* For mobile phones: */
     .circular--portrait{
-        width: 250px;
-        height: 250px;
+        width: 330px;
+        height: 330px;
+    }
+}
+
+@media only screen and (max-width: 830px) {
+    /* For mobile phones: */
+    .circular--portrait{
+        width: 300px;
+        height: 300px;
     }
 }

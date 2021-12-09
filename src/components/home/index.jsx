@@ -13,7 +13,7 @@ class Home extends Component {
                     <Landing/>
                     <About/>
                     <Experience/>
-                    <Skills/>
+                    {/*<Skills/>*/}
                 </Layout>
             </div>
         );

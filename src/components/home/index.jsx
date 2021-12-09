@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import Landing from "./components/landing";
 import About from "./components/about";
-import Skills from "./components/skills";
 import Experience from "./components/experience";
 import Layout from "../layout/layout";
 
@@ -13,7 +12,6 @@ class Home extends Component {
                     <Landing/>
                     <About/>
                     <Experience/>
-                    <Skills/>
                 </Layout>
             </div>
         );

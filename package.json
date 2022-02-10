@@ -17,7 +17,7 @@
     "graphql": "^14.5.4",
     "graphql-tag": "^2.10.1",
     "mdbreact": "^4.6.1",
-    "node-sass": "^4.14.1",
+    "node-sass": "^7.0.0",
     "react": "^16.9.0",
     "react-animated-text": "^0.1.4",
     "react-apollo": "^3.1.0",

@@ -16,5 +16,3 @@ I'm a Software developer, and a tech content creator part-time, and a drummer on
 
 ## 🛠 Skills
 Java, C, PHP, Docker, TypeScript, Javascript, HTML, CSS...
-
-

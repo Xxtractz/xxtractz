@@ -16,6 +16,9 @@ body {
     Helvetica Neue,
     sans-serif;
 }
+html{
+  background: #3f3249 !important;
+}
 
 a {
   color: inherit;

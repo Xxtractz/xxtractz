@@ -1,18 +1,12 @@
-import React, {Component} from 'react';
-import SkillBar from 'react-skillbars';
-import {
-    frameworkSkills,
-    frameworkSkillsColor,
-    programingSkills,
-    programingSkillsColor
-} from "../../../constants/skillsConstants";
-
+import React, { Component } from 'react';
+import SkillBars from './SkillBars';
+import { programingSkills, frameworkSkills } from '../../../constants/skillsConstants';
 
 class Skills extends Component {
     render() {
         return (
             <div>
-                <section id="skills" className="skills ">
+                <section id="skills" className="skills">
                     <div className="container">
 
                         <div className="section-title">
@@ -22,13 +16,13 @@ class Skills extends Component {
                         <div className="section-sub-title">
                             <h4>Programming</h4>
                         </div>
-                        <SkillBar skills={programingSkills} height={20} colors={programingSkillsColor}/>
+                        <SkillBars skills={programingSkills} color="#194e8f" />
 
                         <div className="section-sub-title">
-                            <h4>Framework</h4>
+                            <h4>Frameworks</h4>
                         </div>
+                        <SkillBars skills={frameworkSkills} color="#ba55d3" />
 
-                        <SkillBar skills={frameworkSkills} height={20} colors={frameworkSkillsColor}/>
                     </div>
                 </section>
             </div>

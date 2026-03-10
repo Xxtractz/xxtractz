@@ -1,151 +1,116 @@
-import React, {Component} from 'react';
-import Timeline from '@material-ui/lab/Timeline';
-import TimelineItem from '@material-ui/lab/TimelineItem';
-import TimelineSeparator from '@material-ui/lab/TimelineSeparator';
-import TimelineConnector from '@material-ui/lab/TimelineConnector';
-import TimelineContent from '@material-ui/lab/TimelineContent';
-import TimelineOppositeContent from '@material-ui/lab/TimelineOppositeContent';
-import TimelineDot from '@material-ui/lab/TimelineDot';
-import Paper from '@material-ui/core/Paper';
-import Typography from '@material-ui/core/Typography';
+import React, { Component } from 'react';
+import { experiences } from '../../../constants/experienceConstants';
 
 class Experience extends Component {
     render() {
         return (
-            <div>
-                <section id="experience" className="experience ">
-                    <div className="container">
-
-                        <div className="section-title ">
-                            <h2>Experience</h2>
-                        </div>
-                        <Timeline align="alternate">
-                            <TimelineItem>
-                                <TimelineOppositeContent>
-                                    <Typography variant="body2" color="textSecondary">
-                                        2020-Sep - current
-                                    </Typography>
-                                </TimelineOppositeContent>
-                                <TimelineSeparator>
-                                    <TimelineDot>
-                                    </TimelineDot>
-                                    <TimelineConnector/>
-                                </TimelineSeparator>
-                                <TimelineContent>
-                                    <Paper elevation={3} className="p-2">
-                                        <Typography variant="h6">
-                                            Java Developer
-                                        </Typography>
-                                        <Typography variant="subtitle1" className="text-black-50">
-                                            FNB South Africa (nav»)
-                                        </Typography>
-                                        <Typography variant="body2" display="block">
-                                            Springboot
-                                            <br/>
-                                            RestAPI - Microservices
-                                            <br/>
-                                            Angular
-                                            <br/>
-                                            Server-Side Scripting
-                                            <br/>
-                                            Docker
-                                            <br/>
-                                            Continuous Integration
-
-                                        </Typography>
-                                    </Paper>
-                                </TimelineContent>
-                            </TimelineItem>
-                            <TimelineItem>
-                                <TimelineOppositeContent>
-                                    <Typography variant="body2" color="textSecondary">
-                                        2020 Feb - 2020 Aug
-                                    </Typography>
-                                </TimelineOppositeContent>
-                                <TimelineSeparator>
-                                    <TimelineDot color="primary">
-                                    </TimelineDot>
-                                    <TimelineConnector/>
-                                </TimelineSeparator>
-                                <TimelineContent>
-                                    <Paper elevation={3} className="p-2">
-                                        <Typography variant="h6">
-                                            Junior Java Developer
-                                        </Typography>
-                                        <Typography variant="subtitle1" className="text-black-50">
-                                            FNB South Africa (nav»)
-                                        </Typography>
-                                        <Typography variant="body2">
-                                            created a portal using springboot, Angular and Mysql,
-                                            also made changes to app
-                                        </Typography>
-                                    </Paper>
-                                </TimelineContent>
-                            </TimelineItem>
-                            <TimelineItem>
-                                <TimelineOppositeContent>
-                                    <Typography variant="body2" color="textSecondary">
-                                        2019 Feb - 2019 May
-                                    </Typography>
-                                </TimelineOppositeContent>
-                                <TimelineSeparator>
-                                    <TimelineDot color="primary" variant="outlined">
-                                    </TimelineDot>
-                                    <TimelineConnector/>
-                                </TimelineSeparator>
-                                <TimelineContent>
-                                    <Paper elevation={3} className="p-2">
-                                        <Typography variant="h6">
-                                            Java Developer Intern
-                                        </Typography>
-                                        <Typography variant="subtitle1" className="text-black-50">
-                                            FNB South Africa (Forex)
-                                        </Typography>
-                                        <Typography variant="body2">
-                                            created an in house web application using Angular
-                                        </Typography>
-                                    </Paper>
-                                </TimelineContent>
-                            </TimelineItem>
-                            <TimelineItem>
-                                <TimelineOppositeContent>
-                                    <Typography variant="body2" color="textSecondary">
-                                        (Feb 2016 – Feb 2017)
-                                    </Typography>
-                                </TimelineOppositeContent>
-                                <TimelineSeparator>
-                                    <TimelineDot color="secondary">
-                                    </TimelineDot>
-                                </TimelineSeparator>
-                                <TimelineContent>
-                                    <Paper elevation={3} className="p-2">
-                                        <Typography variant="h6">
-                                            Business Admin intern
-                                        </Typography>
-                                        <Typography variant="subtitle1" className="text-black-50">
-                                            DAV Professional Placement Group (Division of Adcorp)
-                                        </Typography>
-                                        <Typography variant="body2">
-                                            <em> Finance Department</em> – Assisted with General Filing, Invoicing,
-                                            generating reports, Creating POs and PRs.
-                                            <br/>
-                                            <em>Facilities & Maintenance Department</em> – Assisted with general building
-                                            maintenance (including replacing printer toner, changing light bulbs,
-                                            etc.), setting up for boardroom meetings, activation of Access cards or
-                                            tags, installed printers on company PCs and Laptops and worked on
-                                            stock take sheets.
-                                            <br/>
-                                            <em>Office Coordinator Department</em> – Assisted with Coordinating the
-                                            Company meetings, created MS PowerPoint presentations, recording
-                                            company meetings and events.
-                                        </Typography>
-                                    </Paper>
-                                </TimelineContent>
-                            </TimelineItem>
-                        </Timeline>
+            <section id="experience" className="experience">
+                <div className="container">
+                    <div className="section-title">
+                        <h2>Experience</h2>
                     </div>
-                </section>
-            </div>
+
+                    <div style={{ position: 'relative', paddingLeft: 24 }}>
+                        {/* Vertical line */}
+                        <div style={{
+                            position: 'absolute',
+                            left: 7,
+                            top: 8,
+                            bottom: 8,
+                            width: 2,
+                            background: 'linear-gradient(to bottom, #194e8f, #ba55d3)',
+                            borderRadius: 2,
+                        }} />
+
+                        {experiences.map((exp, i) => (
+                            <div key={i} style={{ display: 'flex', gap: 20, marginBottom: 36, position: 'relative' }}>
+                                {/* Dot */}
+                                <div style={{
+                                    position: 'absolute',
+                                    left: -20,
+                                    top: 6,
+                                    width: 14,
+                                    height: 14,
+                                    borderRadius: '50%',
+                                    background: exp.color,
+                                    border: '2px solid #fff',
+                                    boxShadow: `0 0 0 3px ${exp.color}33`,
+                                    flexShrink: 0,
+                                }} />
+
+                                {/* Card */}
+                                <div style={{
+                                    background: '#fff',
+                                    borderRadius: 10,
+                                    boxShadow: '0 2px 12px rgba(25,78,143,0.09)',
+                                    padding: '20px 24px',
+                                    flex: 1,
+                                    borderLeft: `3px solid ${exp.color}`,
+                                }}>
+                                    {/* Header */}
+                                    <div style={{ display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', gap: 6, marginBottom: 4 }}>
+                                        <div>
+                                            <h5 style={{
+                                                margin: 0,
+                                                fontFamily: 'Raleway, sans-serif',
+                                                fontWeight: 700,
+                                                fontSize: '1rem',
+                                                color: '#040b14',
+                                            }}>
+                                                {exp.title}
+                                            </h5>
+                                            <p style={{ margin: '2px 0 0', fontWeight: 600, fontSize: '0.88rem', color: exp.color }}>
+                                                {exp.company}
+                                            </p>
+                                        </div>
+                                        <div style={{ textAlign: 'right' }}>
+                                            <span style={{
+                                                fontSize: '0.78rem',
+                                                fontWeight: 600,
+                                                color: '#fff',
+                                                background: exp.color,
+                                                padding: '2px 10px',
+                                                borderRadius: 20,
+                                                display: 'inline-block',
+                                                marginBottom: 4,
+                                            }}>
+                                                {exp.type}
+                                            </span>
+                                            <p style={{ margin: 0, fontSize: '0.78rem', color: '#8a9ab5' }}>{exp.period}</p>
+                                            <p style={{ margin: 0, fontSize: '0.75rem', color: '#aab' }}>{exp.location}</p>
+                                        </div>
+                                    </div>
+
+                                    {/* Bullets */}
+                                    <ul style={{ margin: '12px 0 14px', paddingLeft: 18 }}>
+                                        {exp.bullets.map((b, j) => (
+                                            <li key={j} style={{ fontSize: '0.875rem', color: '#444c5c', lineHeight: 1.65, marginBottom: 4 }}>
+                                                {b}
+                                            </li>
+                                        ))}
+                                    </ul>
+
+                                    {/* Tags */}
+                                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6 }}>
+                                        {exp.tags.map((tag, k) => (
+                                            <span key={k} style={{
+                                                background: '#eef2fa',
+                                                color: '#194e8f',
+                                                fontSize: '0.73rem',
+                                                fontWeight: 600,
+                                                padding: '2px 10px',
+                                                borderRadius: 20,
+                                            }}>
+                                                {tag}
+                                            </span>
+                                        ))}
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
         );
     }
 }

@@ -145,6 +145,13 @@ class Layout extends Component {
                                         </li>
                                     </>
                                 )}
+
+                                <li className={location.pathname.startsWith('/snippets') ? 'active' : ''}>
+                                    <Link to="/snippets" onClick={closeMobile}>
+                                        <i className="bx bx-code-block" />
+                                        <span>Snippets</span>
+                                    </Link>
+                                </li>
                             </ul>
                         </nav>
 

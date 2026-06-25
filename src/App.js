@@ -7,6 +7,8 @@ import {
 } from 'react-router-dom';
 
 import Home from './components/home';
+import Snippets from './components/snippets';
+import PayslipCalculator from './components/snippets/payslip/PayslipCalculator';
 import Notfound from './components/notfound/notfound';
 
 import AOS from 'aos';
@@ -35,6 +37,8 @@ class App extends Component {
                 <Router>
                     <Switch>
                         <Route exact path="/" component={Home}/>
+                        <Route exact path="/snippets" component={Snippets}/>
+                        <Route exact path="/snippets/sa-payslip-calculator" component={PayslipCalculator}/>
                         <Route exact path="/404" component={Notfound}/>
                         <Redirect to="/404"/>
                     </Switch>
